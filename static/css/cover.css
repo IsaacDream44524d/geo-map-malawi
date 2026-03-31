@@ -117,11 +117,3 @@ body {
 .mastfoot {
   color: #FFFF;
 }
-
-
-/* Message flashing */
-.flash {
-  background-color: rgb(255, 182, 72);
-  padding: 10px;
-  width: 400px;
-}
