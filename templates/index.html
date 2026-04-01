@@ -1,40 +1,18 @@
-
 {% extends 'base.html' %}
 
-{% block body %}
+{% block content %}
 
-<body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">GeoMap</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
-                    <a class="nav-link" href="{{ url_for('data') }}" target="_blank">Data</a>
-                </nav>
-            </div>
-        </header>
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">GeoMap Malawi</h1>
+    <p class="lead" id="info">
+        This is an interactive map of Malawi designed to assess,
+        visualize and analyse enviromental climate, energy and
+        natural resources across Malawi
+    </p>
+    <p class="lead">
+        <a href="#" class="btn btn-lg btn-secondary" target="blank">Launch map</a>
+    </p>
+</main>
 
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading">GeoMap Malawi</h1>
-            <p class="lead" id="info">
-                This is an interactive map of Malawi designed to assess, 
-                visualize and analyse enviromental climate, energy and 
-                natural resources across Malawi
-            </p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary" target="blank">Launch map</a>
-            </p>
-        </main>
 
-        <footer class="mastfoot mt-auto">
-            <div class="inner">
-                <p>© Isaac Dream {{year}}</p>
-            </div>
-        </footer>
-    </div>
-
-</body>
-    
 {% endblock %}

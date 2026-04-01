@@ -7,9 +7,9 @@
     <meta name="author" content="">
     <meta name="generator" content="Jekyll v3.8.5">
     {% if title %}
-        <title>{{title}} - GeoMap Malawi</title>
+    <title>{{title}} - GeoMap Malawi</title>
     {% else %}
-        <title>Home - GeoMap Malawi</title>
+    <title>Home - GeoMap Malawi</title>
     {% endif %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -33,8 +33,32 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
 </head>
 
-<body>
-    {% block body %}{% endblock %}
+<body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">GeoMap</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link {% if active_page == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Home</a>
+                    <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+                    <a class="nav-link {% if active_page == 'data' %}active{% endif %}" href="{{ url_for('data') }}">Data</a>
+                </nav>
+            </div>
+        </header>
+
+        {% block content %}
+
+        {% endblock %}
+
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>© Isaac Dream {{year}}</p>
+            </div>
+        </footer>
+    </div>
+
 </body>
 
 </html>
