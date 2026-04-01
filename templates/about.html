@@ -1,5 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>Under-Construction</p>
+<section class="about-container">
+    <h1>About This Project</h1>
+
+    <p>
+        This project is part of <strong>MUST GIS SOCIETY</strong> mappng competition,
+        created as a competition entry to view, analyze and assess spatial data in a
+        simple and interactive way as such visually presenting spatial data using modern
+        technologies.
+    </p>
+
+    <p>
+        The project focuses on key themes <b> CLIMATE, ENERGY, RESOURCES AND EARTH SCIENCE</b>
+        giving users a new way to explore patterns and relationships across Malawi.
+    </p>
+
+    <p>
+        Built using Python and web technologies, this is not just a technical exercise,
+        a competition trial but an attempt for me to practice my programming and problem
+        solving in the real wolrd.
+    </p>
+
+    <hr />
+
+    <div>
+        <p class="note">
+            Developed as part of <strong>MUST-GIS SOCIETY</strong> competition project.
+        </p>
+        <img src="{{ url_for('static', filename='images/MUST-GIS-LOGO.jpg') }}" class="rounded-circle" style="width: 100px; height:100px; object-fit:cover;" alt="MUST-GIS SOCIETY LOGO">
+    </div>
+</section>
 {% endblock %}
